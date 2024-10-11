@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    os (1.1.4)
+    seccomp-tools (1.6.1)
+      os (~> 1.1, >= 1.1.1)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  seccomp-tools
+
+BUNDLED WITH
+   2.3.26

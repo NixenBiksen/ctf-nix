@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: nixbuild/nix-quick-install-action@v28
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - run: |
+            nix flake check -L
+      - id: automerge
+        if: github.event_name == 'pull_request' && github.head_ref == 'update_flake_lock_action'
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.16.4"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_TOKEN_FOR_UPDATES }}"
+          MERGE_LABELS: ""
+          MERGE_METHOD: squash
