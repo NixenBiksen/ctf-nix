@@ -5,7 +5,8 @@
 ## Packages:
 
 - `ctf-python`: A Python environment preconfigured with popular CTF-related packages such as `pwntools`, `z3`, and more.
-- `ctf-env`: A traditional Linux-like environment based on `pkgs.buildFHSUserEnv`, designed to run CTF binaries that require a non-NixOS environment. It also integrates with the [`nix-shell-wrapper`](https://github.com/NixenBiksen/nix-shell-wrapper) to improve your workflow by setting the `NIX_SHELL_WRAPPER_DESCRIPTIONS` environment variable, which provides additional context inside your shell about the current environment.- `seccomp-tools`: A Nix derivation for the open-source [`seccomp-tools`](https://github.com/david942j/seccomp-tools), useful for analyzing and understanding seccomp profiles in challenges.
+- `ctf-env`: A traditional Linux-like environment based on `pkgs.buildFHSUserEnv`, designed to run CTF binaries that require a non-NixOS environment. It also integrates with the [`nix-shell-wrapper`](https://github.com/NixenBiksen/nix-shell-wrapper) to improve your workflow by setting the `NIX_SHELL_WRAPPER_DESCRIPTIONS` environment variable, which provides additional context inside your shell about the current environment.
+- `seccomp-tools`: A Nix derivation for the open-source [`seccomp-tools`](https://github.com/david942j/seccomp-tools), useful for analyzing and understanding seccomp profiles in challenges.
 
 ---
 
