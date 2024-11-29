@@ -6,7 +6,8 @@
 
 python3.withPackages (
   ps: with ps; [
-    angr
+    # angr is currently broken
+    # angr
     claripy
     gmpy2
     ipython
