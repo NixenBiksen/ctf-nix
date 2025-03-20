@@ -21,5 +21,6 @@ python3.withPackages (
     seccomp
     tqdm
     z3
+    sympy
   ]
 )
