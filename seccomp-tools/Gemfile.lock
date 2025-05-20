@@ -6,10 +6,11 @@ GEM
       os (~> 1.1, >= 1.1.1)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
   seccomp-tools
 
 BUNDLED WITH
-   2.3.26
+   2.5.22

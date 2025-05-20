@@ -11,7 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: nixbuild/nix-quick-install-action@v28
-      - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: |
             nix flake check -L
       - id: automerge
