@@ -3,6 +3,7 @@
   ctf-python,
   seccomp-tools,
   pwntoolsGdb ? pkgs.gdb,
+  pwndbg,
   ...
 }:
 
@@ -18,27 +19,26 @@ let
       exec "$SHELL"
     fi
   '';
-in
 
-pkgs.buildFHSUserEnv {
+in
+pkgs.buildFHSEnv {
   name = "ctf-env";
   runScript = inner;
   targetPkgs =
-    pkgs: with pkgs; [
+    pkgs: [pwndbg] ++ (with pkgs; [
       bvi
       ctf-python
       gdb
       ltrace
       nasm
       one_gadget
-      pwndbg
       pwninit
       ropgadget
       seccomp-tools
       socat
       strace
       vim
-    ];
+    ]);
   multiPkgs =
     pkgs:
     (with pkgs; [
