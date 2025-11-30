@@ -20,7 +20,7 @@ python3.withPackages (
     scipy
     seccomp
     tqdm
-    z3
+    z3-solver
     sympy
   ]
 )
