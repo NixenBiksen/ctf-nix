@@ -2,8 +2,6 @@
   pkgs,
   ctf-python,
   seccomp-tools,
-  pwntoolsGdb ? pkgs.gdb,
-  pwndbg,
   ...
 }:
 
@@ -25,10 +23,9 @@ pkgs.buildFHSEnv {
   name = "ctf-env";
   runScript = inner;
   targetPkgs =
-    pkgs: [pwndbg] ++ (with pkgs; [
+    pkgs: (with pkgs; [
       bvi
       ctf-python
-      gdb
       ltrace
       nasm
       one_gadget
@@ -43,6 +40,7 @@ pkgs.buildFHSEnv {
     pkgs:
     (with pkgs; [
       libseccomp
+      sqlite
       curl
       openssl
       fontconfig
