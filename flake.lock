@@ -44,11 +44,11 @@
         "uv2nix": "uv2nix"
       },
       "locked": {
-        "lastModified": 1788172281,
-        "narHash": "sha256-1jDk9BraAZyGSAuhXS4V3VXHEEUNWGfAH6Ocv5JCU14=",
+        "lastModified": 1790634116,
+        "narHash": "sha256-Q8Ya5wFeCLrvb8AzRM4lZF9YyTopAryS/ypbnVE97Ks=",
         "owner": "pwndbg",
         "repo": "pwndbg",
-        "rev": "2267f2eb102c53552900129224873481995654da",
+        "rev": "d96942e8de6dfab39b27ec7a6576e2b34b9c407c",
         "type": "github"
       },
       "original": {
